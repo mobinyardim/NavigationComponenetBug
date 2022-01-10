@@ -1,14 +1,14 @@
 package ir.inbo.navigationComponenetBug
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
+import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
 import dagger.hilt.android.AndroidEntryPoint
 import ir.inbo.navigationComponenetBug.databinding.ActivityMainBinding
 
@@ -27,6 +27,11 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            Log.i("CurrentDestination", destination.label.toString())
+        }
+
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
