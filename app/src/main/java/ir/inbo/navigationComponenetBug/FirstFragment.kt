@@ -45,7 +45,7 @@ class FirstFragment : Fragment() {
         })
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            Log.i("CurrentDestination", destination.label.toString())
+            Log.i("CurrentDestinationInner", destination.label.toString())
         }
 
         binding.first.setOnClickListener {

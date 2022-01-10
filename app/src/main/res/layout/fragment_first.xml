@@ -23,7 +23,7 @@
         android:id="@+id/first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="first fragment"
+        android:text="first fragment inner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +31,7 @@
         android:id="@+id/second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="second fragment"
+        android:text="second fragment inner"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/first" />
 
@@ -39,8 +39,10 @@
         android:id="@+id/third"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="third fragment"
+        android:text="third fragment inner "
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/second" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
