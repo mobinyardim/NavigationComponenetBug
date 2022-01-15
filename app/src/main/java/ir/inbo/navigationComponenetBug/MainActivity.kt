@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
-            Log.i("CurrentDestination", destination.label.toString())
+            Log.i("DestinationListener", destination.label.toString())
         }
 
         appBarConfiguration = AppBarConfiguration(navController.graph)
